@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="1.7.0" client="site" method="install">
+	<name>User Anywhere</name>
+	<author>Renegade Empire</author>
+	<creationDate>January 2012</creationDate>
+	<copyright>Copyright 2012 Renegade Empire</copyright>
+	<license>None yet. Ask me if you can use it.</license>
+	<authorEmail>sk@renegade-empire.com</authorEmail>
+	<authorUrl>www.renegade-empire.com</authorUrl>
+	<version>0.1</version>
+	<description>A module to display data connected to a single users profile</description>
+	<files>
+		<filename module="mod_useranywhere">mod_useranywhere.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_useranywhere.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="profile_source"
+					type="list"
+					label="User ID source:"
+					description="Where should the user ID come from:"
+					default="manual">
+					<option
+						value="manual">Manual Input (below)</option>
+					<option
+						value="gallery">Gallery Item Artist (automatic)</option>
+					<option
+						value="vm">Virtuemart Manufacturer (automatic)</option>
+				</field>
+				<field
+					name="anyuser_manual"
+					type="text"
+					label="Input a User ID:"
+					description="For manual source only. User ID can be found in the user manager page" />
+				<field
+					name="show_latest"
+					type="list"
+					label="Show latest products:"
+					description="Should the latest products be shown"
+					default="yes">
+					<option
+						value="yes">Yes</option>
+					<option
+						value="no">No</option>
+				</field>
+				<field
+					name="show_featured"
+					type="list"
+					label="Show featured products:"
+					description="Should the featured products be shown"
+					default="yes">
+					<option
+						value="yes">Yes</option>
+					<option
+						value="no">No</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MOD_USERANYWHERE_FIELD_MODULECLASS_SFX_LABEL"
+					description="MOD_USERANYWHERE_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>>
+</extension>
